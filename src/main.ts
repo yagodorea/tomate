@@ -54,7 +54,7 @@ function saveVolume(volume: number): void {
 // Play alarm sound
 function playAlarmSound(soundFile: string, volume?: number): void {
     stopAlarmSound(); // Stop any currently playing sound
-    currentAudio = new Audio(`/assets/${soundFile}`);
+    currentAudio = new Audio(`/tomate/assets/${soundFile}`);
     currentAudio.volume = volume !== undefined ? volume : getSavedVolume();
     currentAudio.play().catch(err => console.error('Error playing sound:', err));
 }

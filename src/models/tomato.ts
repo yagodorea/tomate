@@ -38,7 +38,7 @@ export class PomodoroTomato {
         });
 
         // Load bottom half
-        const bottomGeometry = await loader.loadAsync('/assets/pomodoro_bottom_v01.stl');
+        const bottomGeometry = await loader.loadAsync('/tomate/assets/pomodoro_bottom_v01.stl');
         bottomGeometry.computeVertexNormals();
         this.bottomMesh = new THREE.Mesh(bottomGeometry, tomatoMaterial);
         this.bottomMesh.castShadow = true;
@@ -46,7 +46,7 @@ export class PomodoroTomato {
         this.lowerHalf.add(this.bottomMesh);
 
         // Load top half
-        const topGeometry = await loader.loadAsync('/assets/pomodoro_top_v01.stl');
+        const topGeometry = await loader.loadAsync('/tomate/assets/pomodoro_top_v01.stl');
         topGeometry.computeVertexNormals();
         this.topMesh = new THREE.Mesh(topGeometry, tomatoMaterial.clone());
         this.topMesh.castShadow = true;
