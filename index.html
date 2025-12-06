@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Timer Display -->
+        <div id="timer-display">
+            <span id="time-value">25</span>
+            <span class="time-unit">min</span>
+        </div>
+
+        <!-- Presets Panel -->
+        <div id="presets-panel">
+            <h3>Presets</h3>
+            <button class="preset-btn" data-minutes="5">5 min</button>
+            <button class="preset-btn" data-minutes="15">15 min</button>
+            <button class="preset-btn" data-minutes="25">25 min</button>
+            <button class="preset-btn" data-minutes="45">45 min</button>
+
+            <h3>Alarm Sound</h3>
+            <select id="sound-select">
+                <option value="phone_ring.mp3">Phone Ring</option>
+                <option value="star_trek_klaxon.mp3">Star Trek Klaxon</option>
+                <option value="happy_walk.mp3">Happy Walk</option>
+                <option value="successful_sound.mp3">Success</option>
+                <option value="train_arrived.mp3">Train Arrived</option>
+            </select>
+
+            <div class="volume-control">
+                <label for="volume-slider">Volume</label>
+                <input type="range" id="volume-slider" min="0" max="100" value="70">
+                <span id="volume-value">70%</span>
+            </div>
+
+            <button id="test-sound-btn">Test</button>
+        </div>
+
+        <!-- Controls -->
+        <div id="controls">
+            <button id="start-btn">Start</button>
+            <button id="stop-btn" disabled>Stop</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+
+        <!-- Three.js Canvas -->
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
